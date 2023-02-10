@@ -1,10 +1,12 @@
 :root {
   --black-color: #000000;
   --white-color: #ffffff;
+  --main-font: 'Poppins', sans-serif;
 }
 html,
 header,
 body,
+ul,
 div,
 nav,
 p,
@@ -12,13 +14,26 @@ a,
 figure,
 img,
 h1,
+input,
 button,
 main,
+li,
 section {
   margin: 0;
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--black-color);
+  width: 100%;
+}
+h2 {
+  font-size: 1.6875rem;
+  font-weight: 600;
 }
 
 .header {
@@ -30,4 +45,151 @@ section {
 
 .logo img {
   width: 146px;
+}
+
+.container__dog img {
+  width: 100%;
+}
+
+.container .content__wrapper h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 1.5rem;
+}
+
+.container .content__wrapper {
+  width: 74%;
+  padding-top: 2.5rem;
+  margin: 0 auto;
+}
+.container .content__wrapper img {
+  margin-bottom: 0.875rem;
+  width: 100%;
+}
+
+.content__wrapper .main__text .hello {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.content__wrapper .main__text p {
+  font-size: 1rem;
+  line-height: 140%;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+.question__container {
+  background-color: #feeaea;
+  margin-top: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9.25rem;
+}
+
+.question__container div {
+  width: 74%;
+}
+
+.question__container .question {
+  font-size: 1.6875rem;
+  font-weight: 600;
+}
+
+.button__container {
+  width: 100%;
+  display: flex;
+}
+
+.button__container button {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 0.875rem;
+  font-weight: 500;
+  height: 2.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 2px;
+  line-height: 140%;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 0.125rem;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  margin: 2.5rem auto 0;
+}
+
+.radio__container {
+  width: 74%;
+  margin: 0 auto;
+  padding: 1.25rem 0;
+}
+
+.radio__container ul li {
+  width: 100%;
+  padding: 1.5rem 0 1.5rem 1rem;
+  border: 2px solid #000000;
+  border-radius: 2px;
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9375rem;
+}
+
+.radio__container ul li input[type='radio'] {
+  /* add appearence none to get rid of the native style */
+  appearance: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 2px solid #000000;
+  border-radius: 50%;
+}
+.container__more {
+  background-color: #fff1fe;
+  padding-bottom: 2rem;
+}
+
+.container__more .content__wrapper h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+.container__more .content__wrapper .main__text p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.footer {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  width: 100%;
+  height: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 1.5rem;
+}
+
+.footer .content__footer {
+  width: 74%;
+  margin: 0 auto;
+  font-size: 0.625rem;
+}
+
+.footer .content__footer p:first-child {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.footer .content__footer div {
+  display: flex;
+  gap: 0.625rem;
+  margin: 0.5rem 0;
 }
