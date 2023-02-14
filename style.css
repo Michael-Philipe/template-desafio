@@ -240,3 +240,32 @@ button {
   gap: 0.625rem;
   margin: 0.5rem 0;
 }
+
+@media only screen and (min-width: 1280px) {
+  .header {
+    height: 5rem;
+  }
+
+  .header .logo img {
+    width: 11.25rem;
+  }
+  .container__dog img {
+    display: none;
+  }
+  .container .content__wrapper h1 {
+    font-size: 4.5rem;
+  }
+
+  .container .content__wrapper img {
+    width: 45%;
+  }
+
+  h2 {
+    font-size: 3.4rem;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    margin: 0 0 0 3rem;
+  }
+}
