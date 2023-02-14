@@ -1,6 +1,7 @@
 :root {
   --black-color: #000000;
   --white-color: #ffffff;
+  --form-control-color: rebeccapurple;
   --main-font: 'Poppins', sans-serif;
 }
 html,
@@ -18,6 +19,8 @@ input,
 button,
 main,
 li,
+*:before,
+*:after,
 section {
   margin: 0;
   padding: 0;
@@ -97,6 +100,9 @@ h2 {
   font-size: 1.6875rem;
   font-weight: 600;
 }
+button {
+  cursor: pointer;
+}
 
 .button__container {
   width: 100%;
@@ -142,13 +148,54 @@ h2 {
   font-size: 0.9375rem;
 }
 
-.radio__container ul li input[type='radio'] {
-  /* add appearence none to get rid of the native style */
+.form-control {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 1.125rem;
+  color: var(--black-color);
+}
+.form-control:focus-within {
+  color: var(--form-control-color);
+}
+
+.form-control input[type='radio'] {
+  -webkit-appearance: none;
   appearance: none;
-  height: 1.5rem;
+
+  background-color: #fff;
+
+  margin: 0;
+  font: inherit;
+  color: currentColor;
   width: 1.5rem;
-  border: 2px solid #000000;
+  height: 1.5rem;
+  border: 0.125rem solid currentColor;
   border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.form-control input[type='radio']:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+.form-control input[type='radio']::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+}
+
+.form-control input[type='radio']:checked::before {
+  transform: scale(1);
 }
 .container__more {
   background-color: #fff1fe;
